@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '914793297213138');
+fbq('init', '1715996519703816');
+fbq('track', 'PageView');
+fbq('track', 'Schedule');
+</script>
+<!-- End Meta Pixel Code -->
+<title>You&rsquo;re Booked — Fx Retina</title>
+<meta name="description" content="Your 1-on-1 call with the Fx Retina team is booked. Watch the case study before your call.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a5c45'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial' font-size='30' font-weight='700' fill='%23eaf6ef' text-anchor='middle'%3EFx%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#e2ece5;
+    --sheet:#f7fbf8;
+    --ink:#16211b;
+    --ink-soft:#41504a;
+    --accent:#0f7a5c;
+    --accent-deep:#0a5c45;
+    --stamp:#0a5c45;
+    --rule:#cbdfd2;
+    --highlight:#d5f0e0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  @media (prefers-reduced-motion: reduce){ *{transition:none !important;animation:none !important;} }
+  body{
+    background-color:var(--paper);
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(255,255,255,.55), transparent 45%),
+      radial-gradient(circle at 85% 80%, rgba(20,90,65,.08), transparent 50%),
+      repeating-linear-gradient(0deg, rgba(20,90,65,.02) 0 1px, transparent 1px 3px),
+      repeating-linear-gradient(90deg, rgba(20,90,65,.016) 0 1px, transparent 1px 4px);
+    color:var(--ink);
+    font-family: Georgia, 'Times New Roman', 'Iowan Old Style', serif;
+    font-size:19px;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .sheet{
+    max-width:760px;
+    margin:24px auto 50px;
+    background:var(--sheet);
+    background-image:
+      repeating-linear-gradient(0deg, rgba(20,90,65,.015) 0 1px, transparent 1px 3px);
+    border:1px solid #d6e5db;
+    box-shadow:0 1px 2px rgba(10,60,40,.08), 0 14px 40px rgba(10,60,40,.14);
+    padding:40px 64px 42px;
+    position:relative;
+  }
+  .sheet::before, .sheet::after{
+    content:"";position:absolute;left:0;right:0;height:3px;
+    background:repeating-linear-gradient(90deg, #d6e5db 0 6px, transparent 6px 11px);
+    opacity:.7;
+  }
+  .sheet::before{top:-3px;} .sheet::after{bottom:-3px;}
+
+  .letterhead{text-align:center;margin-bottom:8px;}
+  .wordmark{
+    font-size:26px;letter-spacing:.42em;font-weight:400;color:var(--ink);
+    text-transform:uppercase;margin-left:.42em;
+  }
+  .wordmark-sub{
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:10px;letter-spacing:.5em;color:var(--accent-deep);
+    text-transform:uppercase;margin-top:5px;margin-left:.5em;
+  }
+  .letterhead-rule{
+    width:100%;height:1px;background:var(--rule);margin:18px 0 8px;position:relative;
+  }
+  .letterhead-rule span{
+    position:absolute;left:50%;top:-11px;transform:translateX(-50%);
+    color:var(--accent);font-size:15px;background:var(--sheet);padding:0 14px;
+  }
+
+  .stamp{
+    display:inline-block;
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-weight:700;font-size:13.5px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--stamp);border:2.5px solid var(--stamp);border-radius:4px;
+    padding:6px 14px 5px;transform:rotate(-2deg);
+    mask-image:radial-gradient(circle at 30% 40%, black 96%, transparent 100%);
+    margin:16px 0 14px;
+  }
+
+  h1{
+    font-size:31px;line-height:1.25;font-weight:700;letter-spacing:-.01em;
+    margin-bottom:22px;
+  }
+  h1 .need{color:var(--accent-deep);font-style:italic;}
+  p{margin:0 0 24px;}
+  strong{font-weight:700;}
+
+  /* ---- confirmation-call note ---- */
+  .call-note{
+    background:var(--highlight);border:1.5px dashed var(--accent);border-radius:6px;
+    padding:18px 20px 14px;margin:0 auto 26px;max-width:560px;text-align:center;
+  }
+  .call-note .phone{
+    display:inline-block;font-family:'Helvetica Neue', Arial, sans-serif;
+    font-weight:800;font-size:27px;letter-spacing:.05em;color:var(--accent-deep);
+    text-decoration:none;margin-bottom:8px;
+  }
+  .call-note p{margin:0;font-size:16.5px;line-height:1.6;color:var(--ink);}
+  @keyframes gentleZoom{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.08);}
+  }
+  .call-note .phone{animation:gentleZoom 1.8s ease-in-out infinite;}
+  .call-note .who{
+    display:inline-block;font-weight:700;color:var(--accent-deep);
+    animation:gentleZoom 1.8s ease-in-out infinite;animation-delay:.9s;
+  }
+
+  /* ---- case-study video (above the fold) ---- */
+  .video-sec{margin:0 0 26px;}
+  .video-sec h2{font-size:26px;text-align:center;margin-bottom:14px;}
+  .video-sec h2 span{border-bottom:2px solid var(--accent);padding-bottom:4px;}
+  .video-frame{
+    background:#fff;border:1px solid var(--rule);border-radius:4px;padding:8px;
+    box-shadow:inset 0 1px 3px rgba(10,60,40,.06);
+  }
+  .yt-facade{
+    position:relative;width:100%;aspect-ratio:16/9;cursor:pointer;overflow:hidden;
+    border-radius:2px;background:#000;
+  }
+  .yt-facade img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92;}
+  .yt-facade iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  .yt-play{
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    width:70px;height:50px;background:var(--accent-deep);border-radius:12px;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 6px 20px rgba(0,0,0,.35);transition:transform .15s ease;
+  }
+  .yt-facade:hover .yt-play{transform:translate(-50%,-50%) scale(1.07);}
+  .yt-play::after{
+    content:"";border-style:solid;border-width:10px 0 10px 18px;
+    border-color:transparent transparent transparent #fff;margin-left:4px;
+  }
+
+  /* ---- sleek CTA buttons ---- */
+  .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:2px 0 8px;}
+  .cta-btn{
+    display:inline-block;text-decoration:none;
+    font-family:'Helvetica Neue', Arial, sans-serif;font-weight:600;font-size:13px;
+    letter-spacing:.09em;text-transform:uppercase;
+    padding:12px 24px;border-radius:3px;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .cta-btn.solid{
+    background:var(--accent-deep);color:#eef8f2;border:1px solid var(--accent-deep);
+  }
+  .cta-btn.solid:hover{background:var(--accent);}
+  .cta-btn.ghost{
+    background:transparent;color:var(--accent-deep);border:1px solid var(--accent-deep);
+  }
+  .cta-btn.ghost:hover{background:var(--highlight);}
+
+  /* ---- pointers ---- */
+  .points{margin:26px 0 8px;}
+  .pt{
+    display:flex;gap:14px;align-items:baseline;
+    padding:11px 0;border-bottom:1px dotted var(--rule);
+  }
+  .pt:last-child{border-bottom:0;}
+  .pt .tick{color:var(--accent-deep);font-size:19px;flex:0 0 auto;line-height:1.6;}
+  .pt p{margin:0;font-size:18px;}
+
+  .signoff{margin:30px 0 6px;}
+  .signature{
+    font-size:22px;letter-spacing:.42em;font-weight:400;color:var(--ink);
+    text-transform:uppercase;margin:8px 0 6px;display:inline-block;
+  }
+  .sig-title{
+    font-family:'Helvetica Neue', Arial, sans-serif;font-size:12px;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--accent-deep);
+  }
+
+  footer{
+    max-width:760px;margin:0 auto 40px;text-align:center;
+    font-family:'Helvetica Neue', Arial, sans-serif;font-size:12.5px;letter-spacing:.06em;
+    color:var(--ink-soft);line-height:2;
+  }
+  footer a{color:var(--ink-soft);}
+
+  @media (max-width:640px){
+    body{font-size:17.5px;}
+    .sheet{margin:10px 10px 30px;padding:26px 20px 30px;}
+    h1{font-size:24px;margin-bottom:16px;}
+    .wordmark{font-size:20px;}
+    .letterhead-rule{margin:14px 0 6px;}
+    .stamp{margin:12px 0 12px;}
+    .video-sec h2{font-size:22px;}
+    .cta-btn{padding:11px 18px;font-size:12px;}
+    .pt p{font-size:16.5px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- Meta Pixel (noscript fallback) -->
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=914793297213138&amp;ev=PageView&amp;noscript=1"
+/><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1715996519703816&amp;ev=PageView&amp;noscript=1"
+/></noscript>
+
+<main class="sheet">
+
+  <header class="letterhead">
+    <div class="brand-text">
+      <div class="wordmark">Fx Retina</div>
+      <div class="wordmark-sub">Performance Marketing</div>
+    </div>
+    <div class="letterhead-rule"><span>&#10022;</span></div>
+  </header>
+
+  <div style="text-align:center">
+    <span class="stamp">Application Received</span>
+    <h1>Your call is booked &mdash; <span class="need">see you on Google Meet!</span></h1>
+  </div>
+
+  <div class="call-note">
+    <a class="phone" href="tel:+917985886831">+91 79858 86831</a>
+    <p>Our team member <span class="who">Divyanshu</span> will call you soon from this number to confirm
+    your appointment &mdash; make sure to <strong>receive the call &amp; save this number</strong>.</p>
+  </div>
+
+  <!-- Case-study video: above the fold -->
+  <section class="video-sec">
+    <h2><span>Watch Case Study</span></h2>
+    <div class="video-frame">
+      <div class="yt-facade" id="ytFacade" role="button" aria-label="Play case study video" tabindex="0">
+        <img src="https://i.ytimg.com/vi/j0Ep8BMXvgY/maxresdefault.jpg" alt="Fx Retina clinic case study video" loading="lazy"
+             onerror="this.src='https://i.ytimg.com/vi/j0Ep8BMXvgY/hqdefault.jpg';this.onerror=null;">
+        <span class="yt-play"></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-row">
+    <a class="cta-btn solid" href="https://wa.me/917985886831?text=Hi%20Fx%20Retina%20team%2C%20I%20just%20booked%20my%201-on-1%20call." target="_blank" rel="noopener">WhatsApp Now</a>
+    <a class="cta-btn ghost" href="https://www.instagram.com/dmsinghaditya/" target="_blank" rel="noopener">Follow Our Founder</a>
+  </div>
+
+  <section class="points">
+    <div class="pt"><span class="tick">&#10004;</span>
+      <p><strong>Watch the case study above</strong> before the call &mdash; the call will make 10x more sense.</p></div>
+    <div class="pt"><span class="tick">&#10004;</span>
+      <p><strong>Keep your rough numbers handy</strong> &mdash; monthly ad spend, appointments &amp; procedures.</p></div>
+    <div class="pt"><span class="tick">&#10004;</span>
+      <p><strong>Bring the decision-maker</strong> if that&rsquo;s not only you &mdash; it makes the call twice as useful.</p></div>
+    <div class="pt"><span class="tick">&#10004;</span>
+      <p><strong>Need to reschedule?</strong> Tell Divyanshu on the confirmation call, or WhatsApp us at least 12 hours before.</p></div>
+  </section>
+
+  <div class="signoff">
+    <p style="margin-bottom:0">Warm regards,</p>
+    <div class="signature">Team Fx Retina</div>
+    <div class="sig-title">Fx Retina &middot; Performance Marketing &middot; India</div>
+  </div>
+
+</main>
+
+<script>
+(function(){
+  var f=document.getElementById('ytFacade');if(!f)return;
+  /* YouTube refuses embeds from a null origin (file://), so send those clicks to YouTube. */
+  var canEmbed=location.protocol==='http:'||location.protocol==='https:';
+  function load(){
+    if(f.querySelector('iframe'))return;
+    if(window.fbq)fbq('trackCustom','CaseStudyVideoPlay');
+    if(window.dataLayer)dataLayer.push({event:'case_study_video_play',video_id:'j0Ep8BMXvgY'});
+    if(!canEmbed){window.open('https://www.youtube.com/watch?v=j0Ep8BMXvgY','_blank','noopener');return;}
+    var i=document.createElement('iframe');
+    i.src='https://www.youtube-nocookie.com/embed/j0Ep8BMXvgY?autoplay=1&rel=0&modestbranding=1';
+    i.allow='accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture';
+    i.allowFullscreen=true;
+    f.appendChild(i);
+  }
+  f.addEventListener('click',load);
+  f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();load();}});
+})();
+</script>
+
+<footer>
+  &copy; Fx Retina &middot; India<br>
+  <a href="mailto:4.fxretina@gmail.com">4.fxretina@gmail.com</a> &middot; +91 79858 86831<br>
+  This page confirms your application call. Results depend on your clinic and market.
+</footer>
+
+</body>
+</html>

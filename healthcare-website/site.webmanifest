@@ -1,0 +1,12 @@
+{
+  "name": "FxRetina Healthcare",
+  "short_name": "FxRetina",
+  "description": "Specialist healthcare digital marketing agency.",
+  "start_url": "/healthcare-website/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0B2A4A",
+  "icons": [
+    { "src": "/healthcare-website/assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

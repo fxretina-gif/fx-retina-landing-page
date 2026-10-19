@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# AI / answer engines
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://appointments.fxretina.agency/healthcare-website/sitemap.xml
