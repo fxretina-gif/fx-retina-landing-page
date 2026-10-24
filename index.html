@@ -530,7 +530,7 @@ table.cmp{width:100%;border-collapse:collapse;min-width:640px;font-size:15.5px}
     </div>
 
     <div class="vsl" id="vsl">
-      <div class="vsl-frame" data-wistia-hero="essrtdir4t" role="button" tabindex="0" aria-label="Play Aditya's explainer video">
+      <div class="vsl-frame" data-hero-video="Content/video/hero-vsl.mp4" role="button" tabindex="0" aria-label="Play Aditya's explainer video">
         <video class="vsl-preview" src="Content/video/hero-preview.mp4" poster="Content/video/poster-hero-vsl-essrtdir4t.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
         <div class="vsl-play"><span><svg width="32" height="32"><use href="#i-play"/></svg></span></div>
         <span class="vsl-sound">▶ Watch with sound · 1:20</span>
@@ -1116,7 +1116,17 @@ table.cmp{width:100%;border-collapse:collapse;min-width:640px;font-size:15.5px}
       el.addEventListener('keydown', function(e){ if ((e.key === 'Enter' || e.key === ' ') && !el.querySelector('iframe')) { e.preventDefault(); play(); } });
     });
   }
-  inline('[data-wistia-hero]', function(el){ document.getElementById('vsl').classList.add('playing'); return WISTIA(el.dataset.wistiaHero); });
+  // Hero video is self-hosted (its Wistia copy, essrtdir4t, was found deleted on 24 Oct 2026: "Media not found")
+  document.querySelectorAll('[data-hero-video]').forEach(function(el){
+    function play(){
+      document.getElementById('vsl').classList.add('playing');
+      el.innerHTML = '<video src="' + el.dataset.heroVideo + '" poster="Content/video/poster-hero-vsl-essrtdir4t.jpg" controls playsinline preload="auto"></video>';
+      el.removeAttribute('role'); el.style.cursor = 'auto';
+      var p = el.querySelector('video').play(); if (p && p.catch) p.catch(function(){});
+    }
+    el.addEventListener('click', play, { once: true });
+    el.addEventListener('keydown', function(e){ if ((e.key === 'Enter' || e.key === ' ') && el.hasAttribute('role')) { e.preventDefault(); play(); } });
+  });
   inline('[data-wistia]', function(el){ return WISTIA(el.dataset.wistia); });
   inline('[data-embed]', function(el){ return el.dataset.embed; });
   inline('[data-yt]', function(el){ return YT(el.dataset.yt); });
