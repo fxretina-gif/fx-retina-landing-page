@@ -103,11 +103,13 @@ p{margin:0}
 .bk-head h2{font:800 22px/1.25 var(--display);color:var(--ink);letter-spacing:-.02em}
 .bk-head p{font-size:14.5px;line-height:1.45;color:var(--muted);margin-top:3px}
 .bk-warning{font-size:13.5px;font-weight:700;color:var(--red);line-height:1.5;padding:14px 28px 0}
-/* Calendly inline widget: the wrap holds 700px while loading; resize:true then grows the iframe to fit each step */
+/* Calendly inline widget: the wrap holds 700px while loading; resize:true then grows the iframe to fit each step.
+   The iframe keeps 700px itself, so it can't shrink to a 150px strip if Calendly's height messages never arrive
+   (e.g. the page opened as a local file). Real step heights run 700–1,450px, so this never cuts one short. */
 .bk-embed-wrap{position:relative;min-height:700px;border-radius:0 0 14px 14px;overflow:hidden;background:#fff}
 .bk-embed-wrap.ready{min-height:0}
 .bk-embed-wrap.ready .bk-loading{display:none}
-.bk-embed-wrap iframe{position:relative;z-index:1;display:block}
+.bk-embed-wrap iframe{position:relative;z-index:1;display:block;min-height:700px}
 .bk-loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:14.5px;color:var(--muted)}
 
 /* footer */
