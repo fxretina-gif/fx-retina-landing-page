@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Book your strategy call · FX Retina</title>
+<meta name="description" content="Pick a time for a free 45-minute call with Aditya.">
+<link rel="icon" href="Content/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="preconnect" href="https://assets.calendly.com">
+<!-- Meta Pixel: FX Retina's own pixel only -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '914793297213138');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=914793297213138&ev=PageView&noscript=1"></noscript>
+<!-- End Meta Pixel -->
+<style>
+/* FX Retina · original-2 booking page, variation 2: Calendly straight away, no form first. Same tokens as book-a-call.html. */
+:root{
+  --orange:#e94e1a; --orange-deep:#be1522; --orange-ink:#c23d0d; --orange-wash:#fff1eb; --orange-line:#fbd3c3;
+  --ink:#14171c; --text:#3a404a; --muted:#6a717d; --quiet:#8a909a; --line:#e5e7eb; --soft:#f6f7f9; --white:#ffffff;
+  --green:#15803d; --green-wash:#e9f7ef; --red:#b42318;
+  --display:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  --body:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:var(--soft) linear-gradient(180deg,var(--orange-wash) 0,var(--soft) 520px) no-repeat;color:var(--text);font:400 17px/1.6 var(--body);font-variant-numeric:tabular-nums;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);color:var(--ink);margin:0;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:20px}
+
+/* buttons (from the sales page) */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--orange);color:#fff;text-decoration:none;font:700 17px/1 var(--body);padding:18px 30px;border-radius:999px;box-shadow:0 6px 18px rgba(233,78,26,.30);transition:transform .15s,background .15s;border:0;cursor:pointer}
+.btn:hover{background:var(--orange-deep);transform:translateY(-1px)}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn svg{flex:none}
+.btn-sm{font-size:14.5px;padding:11px 18px;box-shadow:none}
+
+/* nav: logo + a quiet way back, no button */
+.nav{background:rgba(255,255,255,.94);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.logo{height:38px;width:auto}
+.back{font:600 14.5px/1 var(--body);color:var(--muted);text-decoration:none;padding:12px 0;white-space:nowrap}
+.back:hover{color:var(--ink)}
+.back:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:4px}
+
+/* page head */
+.book{flex:1;width:100%;max-width:760px;margin:0 auto;padding:44px 20px 64px}
+.book.wide{max-width:1100px}
+/* the head breaks out of the column so line 2 of the headline fits on one line */
+.book-head{text-align:center;width:min(1240px,calc(100vw - 40px));margin:0 0 30px;position:relative;left:50%;transform:translateX(-50%)}
+.eyebrow{display:inline-block;font:800 13.5px/1.3 var(--body);letter-spacing:.07em;text-transform:uppercase;color:var(--orange-deep)}
+.book-head h1{margin-top:12px;font-size:clamp(30px,3.7vw,50px);line-height:1.14;font-weight:800;letter-spacing:-.032em;text-wrap:initial}
+.book-head h1 .l1{display:block;font-size:clamp(28px,3.4vw,42px)} /* line 1 at its original size */
+.book-head h1 .l2{display:block;white-space:nowrap} /* line 2 a step bigger, one line from tablet up */
+.reassure{list-style:none;padding:0;margin:18px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px}
+.reassure li{display:inline-flex;align-items:center;gap:7px;font:600 14.5px/1.3 var(--body);color:var(--ink)}
+.reassure svg{color:var(--orange);flex:none}
+
+/* card */
+.form-card{background:#fff;border:1.5px solid #f2cdbd;border-top:5px solid var(--orange);border-radius:18px;box-shadow:0 26px 70px rgba(12,14,19,.14);padding:28px 40px 32px}
+@keyframes fqIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.fq-success{display:none;text-align:center;padding:12px 4px 6px}
+.fq-success.show{display:block;animation:fqIn .3s ease}
+.fq-success .tick{width:60px;height:60px;border-radius:50%;background:var(--green-wash);color:var(--green);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.fq-success.unq .tick{background:var(--orange-wash);color:var(--orange-deep)}
+.fq-success h3{font-size:23px;margin-bottom:8px}
+.fq-success p{font-size:15.5px;max-width:440px;margin:0 auto}
+.fq-success .btn{margin-top:18px}
+/* booked: Aditya's videos while the lead is still warm (thumbnails only; a video loads when tapped) */
+.bk-videos{width:min(1100px,calc(100vw - 40px));position:relative;left:50%;transform:translateX(-50%);margin-top:56px;text-align:center}
+.bk-videos[hidden]{display:none}
+.bk-videos h2{font:800 clamp(24px,2.6vw,32px)/1.2 var(--display);letter-spacing:-.02em;color:var(--ink);margin:0 auto 26px;max-width:760px}
+.vid-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;text-align:left}
+.vid .thumb{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000;cursor:pointer;box-shadow:0 1px 2px rgba(20,23,28,.06),0 8px 24px rgba(20,23,28,.08)}
+.vid .thumb img{width:100%;height:100%;object-fit:cover}
+.vid .thumb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid .thumb:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.vid .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.vid .play span{width:50px;height:50px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.35);transition:transform .15s}
+.vid .thumb:hover .play span{transform:scale(1.08)}
+.vid .cap{display:block;margin-top:10px;font:700 14.5px/1.35 var(--body);color:var(--ink)}
+@media (max-width:900px){.vid-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.vid-grid{grid-template-columns:1fr;gap:18px}.bk-videos{margin-top:40px}.bk-videos h2{font-size:23px;margin-bottom:20px}}
+
+/* booking state: card goes edge to edge so the Calendly calendar gets the full width */
+.form-card.is-booking{padding:0;overflow:hidden}
+.bk-state{display:none}
+.bk-state.show{display:block;animation:fqIn .3s ease}
+.bk-head{display:flex;align-items:center;gap:14px;padding:22px 28px;border-bottom:1px solid var(--line)}
+.bk-head img{width:54px;height:54px;border-radius:50%;object-fit:cover;object-position:50% 14%;background:var(--orange-wash);box-shadow:0 0 0 2px #fff,0 0 0 3.5px var(--orange-line);flex:none}
+.bk-head h2{font:800 22px/1.25 var(--display);color:var(--ink);letter-spacing:-.02em}
+.bk-head p{font-size:14.5px;line-height:1.45;color:var(--muted);margin-top:3px}
+.bk-warning{font-size:13.5px;font-weight:700;color:var(--red);line-height:1.5;padding:14px 28px 0}
+/* Calendly inline widget: the wrap holds 700px while loading; resize:true then grows the iframe to fit each step */
+.bk-embed-wrap{position:relative;min-height:700px;border-radius:0 0 14px 14px;overflow:hidden;background:#fff}
+.bk-embed-wrap.ready{min-height:0}
+.bk-embed-wrap.ready .bk-loading{display:none}
+.bk-embed-wrap iframe{position:relative;z-index:1;display:block}
+.bk-loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:14.5px;color:var(--muted)}
+
+/* footer */
+.foot{background:#fff;border-top:1px solid var(--line);padding:22px 20px calc(22px + env(safe-area-inset-bottom,0px));text-align:center;font-size:13px;line-height:1.55;color:var(--quiet)}
+.foot p{max-width:860px;margin:0 auto}
+.foot p + p{margin-top:6px}
+.foot a{color:var(--muted)}
+.foot a:hover{color:var(--ink)}
+
+@media (max-width:680px){
+  body{font-size:16px;background-image:linear-gradient(180deg,var(--orange-wash) 0,var(--soft) 360px)}
+  .wrap{padding-inline:16px}
+  .nav .wrap{height:58px}
+  .logo{height:32px}
+  .back{font-size:14px}
+  .book{padding:22px 16px 44px}
+  .book-head{margin-bottom:18px}
+  .eyebrow{font-size:12.5px}
+  .book-head h1{margin-top:8px;font-size:30px;line-height:1.15}
+  .book-head h1 .l1{font-size:26px}
+  .book-head h1 .l2{white-space:normal}
+  .reassure{margin-top:12px;gap:6px 14px}
+  .reassure li{font-size:13px;gap:5px}
+  .reassure svg{width:15px;height:15px}
+  .form-card{padding:20px 18px 22px}
+  .bk-head{padding:18px 18px;gap:12px}
+  .bk-head img{width:46px;height:46px}
+  .bk-head h2{font-size:19px}
+  .bk-head p{font-size:13.5px}
+  .bk-warning{font-size:12.5px;padding:12px 18px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="#fff" d="M8 5v14l11-7z"/></symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="index.html" aria-label="FX Retina home"><img class="logo" src="Content/fx-retina-logo.png" alt="FX Retina" width="727" height="200"></a>
+    <a href="index.html" class="back">&larr; Back to the page</a>
+  </div>
+</header>
+
+<main class="book wide" id="book">
+  <div class="book-head">
+    <span class="eyebrow">Book your strategy call</span>
+    <h1><span class="l1">Tell us about your clinic,</span> <span class="l2">Book your free Clinics Growth Call below</span></h1>
+    <ul class="reassure">
+      <li><svg width="17" height="17" aria-hidden="true"><use href="#i-check"/></svg>Free 45-minute call</li>
+      <li><svg width="17" height="17" aria-hidden="true"><use href="#i-check"/></svg>₹2 lakh+/month ad spend</li>
+    </ul>
+  </div>
+
+  <div class="form-card is-booking" id="fcard">
+    <!-- Calendly from the first second; its own questions replace the form -->
+    <div class="bk-state show" id="bkState">
+      <div class="bk-head">
+        <img src="Content/aditya-singh.png" alt="Aditya Singh" width="500" height="500">
+        <div>
+          <h2>Pick a time for your call below.</h2>
+          <p>45 minutes with Aditya. He looks at your account himself.</p>
+        </div>
+      </div>
+      <p class="bk-warning">DISCLAIMER: YOUR CALL WILL BE CANCELED IF THE INFORMATION IS INCORRECT.</p>
+      <div class="bk-embed-wrap" id="bkWrap"><div class="bk-loading">Loading available times…</div></div>
+    </div>
+
+    <!-- the booking calendar failed to load (blocked or offline) -->
+    <div class="fq-success unq" id="fqNoCal">
+      <div class="tick"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 8v5M12 16.5v.01"/><circle cx="12" cy="12" r="9.5"/></svg></div>
+      <h3>The calendar didn't load here.</h3>
+      <p>Open it on Calendly to pick a time for your call with Aditya.</p>
+      <a class="btn btn-sm" href="#" id="calLink">Open the calendar</a>
+    </div>
+
+    <!-- booked in Calendly -->
+    <div class="fq-success booked" id="fqBooked">
+      <div class="tick"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <h3>Booked</h3>
+      <p>Check your email for the invite. Aditya's team will WhatsApp you before the call.</p>
+    </div>
+  </div>
+
+  <!-- after booking: its own section under the card -->
+  <section class="bk-videos" id="bkVideos" hidden>
+    <h2>More videos to understand about our work before the call</h2>
+      <div class="vid-grid">
+      <div class="vid"><div class="thumb" data-yt="w4StBYDKkgY" role="button" tabindex="0" aria-label="Play: Clinic chain · ₹1.12 Cr Meta Ads"><img src="Content/youtube/yt-w4StBYDKkgY.jpg" alt="" loading="lazy" width="1280" height="720"><span class="play"><span><svg width="18" height="18" aria-hidden="true"><use href="#i-play"/></svg></span></span></div><span class="cap">Clinic chain · ₹1.12 Cr Meta Ads</span></div>
+      <div class="vid"><div class="thumb" data-yt="Z7C9AEbO5ak" role="button" tabindex="0" aria-label="Play: Clinic patient leads · Google Ads step-by-step"><img src="Content/youtube/yt-Z7C9AEbO5ak.jpg" alt="" loading="lazy" width="1280" height="720"><span class="play"><span><svg width="18" height="18" aria-hidden="true"><use href="#i-play"/></svg></span></span></div><span class="cap">Clinic patient leads · Google Ads step-by-step</span></div>
+      <div class="vid"><div class="thumb" data-yt="FbYM1Td6tN4" role="button" tabindex="0" aria-label="Play: Healthcare business · ₹10L revenue in 21 days"><img src="Content/youtube/yt-FbYM1Td6tN4.jpg" alt="" loading="lazy" width="1280" height="720"><span class="play"><span><svg width="18" height="18" aria-hidden="true"><use href="#i-play"/></svg></span></span></div><span class="cap">Healthcare business · ₹10L revenue in 21 days</span></div>
+      <div class="vid"><div class="thumb" data-yt="yoJKrfUUHDs" role="button" tabindex="0" aria-label="Play: Dental clinic · 5,000+ Meta Ads leads"><img src="Content/youtube/yt-yoJKrfUUHDs.jpg" alt="" loading="lazy" width="1280" height="720"><span class="play"><span><svg width="18" height="18" aria-hidden="true"><use href="#i-play"/></svg></span></span></div><span class="cap">Dental clinic · 5,000+ Meta Ads leads</span></div>
+      <div class="vid"><div class="thumb" data-yt="j0Ep8BMXvgY" role="button" tabindex="0" aria-label="Play: Clinic chain · ₹47.4L spent in 30 days"><img src="Content/youtube/yt-j0Ep8BMXvgY.jpg" alt="" loading="lazy" width="1280" height="720"><span class="play"><span><svg width="18" height="18" aria-hidden="true"><use href="#i-play"/></svg></span></span></div><span class="cap">Clinic chain · ₹47.4L spent in 30 days</span></div>
+      <div class="vid"><div class="thumb" data-yt="3D_YwhbHWyo" role="button" tabindex="0" aria-label="Play: IVF clinic · ₹14L spend, 1,863 leads"><img src="Content/youtube/yt-3D_YwhbHWyo.jpg" alt="" loading="lazy" width="1280" height="720"><span class="play"><span><svg width="18" height="18" aria-hidden="true"><use href="#i-play"/></svg></span></span></div><span class="cap">IVF clinic · ₹14L spend, 1,863 leads</span></div>
+      </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>FX Retina, DLF MyPad, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010 · <a href="privacy-policy.html">Privacy policy</a> · <a href="terms-and-conditions.html">Terms</a></p>
+  <p>This site is not a part of the Facebook website or Meta Platforms, Inc., and is not endorsed by Facebook in any way. FACEBOOK is a trademark of Meta Platforms, Inc.</p>
+  <p>© 2026 FX Retina</p>
+</footer>
+
+<script>
+(function(){
+  // ===== Wiring: FX Retina's own endpoints only =====
+  // Variation 2 of the booking page: no form and no qualification on the page. Calendly asks the questions,
+  // and the team cancels bookings that don't fit. Nothing is written to the lead sheet from here.
+  var CONFIG = {
+    VARIANT: 'original-2-v2',
+    CALENDLY_URL: 'https://calendly.com/fxretina/clinics-growth-call', // swap for the new event with the full questions
+    PAGE_TAG: 'bookpage-v2'   // sent to Calendly as utm_term, so each booking shows which booking page it came from
+  };
+
+  // PREVIEW ONLY: ?preview=1 shows the real Calendly calendar but sends no custom pixel events; never click a slot.
+  // ?preview=booked shows the post-booking state.
+  var PREVIEW = /[?&]preview=/.test(location.search);
+  var PREVIEW_BOOKED = /[?&]preview=booked(&|$)/.test(location.search);
+
+  // ===== Pixel helper: every custom/standard event carries the variant =====
+  // ApplyIntent keeps the funnel totals comparable with book-a-call.html. BookPageV2 / BookedV2 exist because pixel
+  // stats can't split an event by its parameters: this page's opens and bookings need names of their own.
+  function px(kind, name, params){
+    if (!window.fbq || PREVIEW) return;
+    var p = { variant: CONFIG.VARIANT };
+    if (params) for (var k in params) p[k] = params[k];
+    fbq(kind, name, p);
+  }
+  px('trackCustom', 'ApplyIntent');   // reaching this page = clicked a CTA on the sales page
+  px('trackCustom', 'BookPageV2');
+
+  var book = document.getElementById('book'), card = document.getElementById('fcard');
+  var bkState = document.getElementById('bkState'), bkWrap = document.getElementById('bkWrap');
+  var scheduleFired = false;
+
+  function reveal(){   // keep the card's top on screen after it changes (mobile users are scrolled down at booking)
+    var top = card.getBoundingClientRect().top;
+    if (top < 0 || top > window.innerHeight * 0.6) window.scrollTo({ top: window.pageYOffset + top - 12, behavior: 'smooth' });
+  }
+  function show(id){ document.getElementById(id).classList.add('show'); reveal(); }
+  function leaveBooking(){
+    bkState.classList.remove('show'); card.classList.remove('is-booking'); book.classList.remove('wide');
+    bkWrap.innerHTML = '';
+  }
+
+  // ===== Booking (Calendly) =====
+  function calendlyUrl(){
+    // encodeURIComponent, not URLSearchParams: Calendly's widget.js keeps '+' literally, so spaces must be %20
+    var q = { hide_gdpr_banner: '1', utm_term: CONFIG.PAGE_TAG };
+    return CONFIG.CALENDLY_URL + (CONFIG.CALENDLY_URL.indexOf('?') === -1 ? '?' : '&') +
+      Object.keys(q).map(function(k){ return k + '=' + encodeURIComponent(q[k]); }).join('&');
+  }
+  document.getElementById('calLink').href = calendlyUrl();
+  function startBooking(){
+    var el = document.createElement('div');
+    bkWrap.appendChild(el);
+    var fallback = function(){ leaveBooking(); show('fqNoCal'); };   // calendar blocked/offline: still one way to book
+    var init = function(){
+      if (!window.Calendly) return fallback();
+      window.Calendly.initInlineWidget({ url: calendlyUrl(), parentElement: el, resize: true });
+      var frame = bkWrap.querySelector('iframe');
+      if (!frame) return fallback();
+      frame.addEventListener('load', function(){ bkWrap.classList.add('ready'); });
+    };
+    var s = document.createElement('script');
+    s.src = 'https://assets.calendly.com/assets/external/widget.js';
+    s.async = true; s.onload = init; s.onerror = fallback;
+    document.head.appendChild(s);
+  }
+  // Calendly's inline widget posts {event:'calendly.event_scheduled'} from https://calendly.com once the booking is saved
+  window.addEventListener('message', function(e){
+    if (e.origin !== 'https://calendly.com' || !e.data || e.data.event !== 'calendly.event_scheduled' || scheduleFired) return;
+    scheduleFired = true;
+    px('track', 'Schedule');
+    px('trackCustom', 'BookedV2');
+    leaveBooking();
+    showBooked();
+  });
+  function showBooked(){ show('fqBooked'); document.getElementById('bkVideos').hidden = false; }
+
+  // Click-to-play: swap the thumbnail for the YouTube player; starting one puts any other back to its thumbnail
+  var playing = null;
+  function stopVideo(t){ t.innerHTML = t.dataset.thumb; }
+  function playVideo(t){
+    if (t.querySelector('iframe')) return;
+    if (playing && playing !== t) stopVideo(playing);
+    t.dataset.thumb = t.innerHTML;
+    t.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + t.dataset.yt + '?autoplay=1&rel=0&playsinline=1" title="' + t.getAttribute('aria-label').replace(/^Play: /, '') + '" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+    playing = t;
+  }
+  document.querySelectorAll('.vid .thumb').forEach(function(t){
+    t.addEventListener('click', function(){ playVideo(t); });
+    t.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); playVideo(t); } });
+  });
+
+  if (PREVIEW_BOOKED) { leaveBooking(); showBooked(); }
+  else startBooking();
+})();
+</script>
+</body>
+</html>
