@@ -314,7 +314,7 @@ p{margin:0}
     <div class="fq-success unq" id="fqUnqualified">
       <div class="tick"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 8v5M12 16.5v.01"/><circle cx="12" cy="12" r="9.5"/></svg></div>
       <h3>Thank you. We're not the right fit yet.</h3>
-      <p>Right now we only take clinics with 2+ branches spending at least ₹80,000 a month on ads, because that's where our system pays back. Aditya's YouTube channel covers what to fix first.</p>
+      <p>Right now we only take clinics spending at least ₹80,000 a month on ads, because that's where our system pays back. Aditya's YouTube channel covers what to fix first.</p>
       <a class="btn btn-sm" href="https://www.youtube.com/@adityasingh-irunads" id="ytLink" target="_blank" rel="noopener">Watch on YouTube</a>
     </div>
 
@@ -355,7 +355,7 @@ p{margin:0}
     CALENDLY_URL: 'https://calendly.com/fxretina/clinics-growth-call', // Aditya's Calendly event; '' = team calls instead
     YOUTUBE_URL: 'https://www.youtube.com/@adityasingh-irunads',
     // Answers that do NOT qualify for a call; must match the option text exactly.
-    DISQUALIFY: { branches: ['1 branch'], ad_spend: ['Under ₹80,000'] } // ₹80,000–2 lakh qualifies on purpose (Nik, 8 Oct; line moved from ₹1 lakh to ₹80,000 on 2 Nov): the call can move them up
+    DISQUALIFY: { ad_spend: ['Under ₹80,000'] } // only spend decides who qualifies; branch count is asked (and pre-fills Calendly) but never turns anyone away (Nik, 28 Oct + 20 Nov). ₹80,000–2 lakh qualifies on purpose (Nik, 8 Oct; line moved from ₹1 lakh to ₹80,000 on 2 Nov): the call can move them up
   };
   var QUESTIONS = [{ key: 'specialty', type: 'single' }, { key: 'branches', type: 'single' }, { key: 'ad_spend', type: 'single' }, { key: 'city', type: 'text' }];
   // Link fields on the contact step, both required: clinic website / Google Maps listing, and a personal
